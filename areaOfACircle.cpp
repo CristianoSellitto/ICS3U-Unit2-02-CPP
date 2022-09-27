@@ -2,26 +2,29 @@
 //
 // Created by Cristiano Sellitto
 // Created in September 2022
-// A program that finds the area and perimeter for a circle using user input
+// A program that finds the area and perimeter for a rectangle using user input
 
 #include <cmath>
 #include <iostream>
 
-int radiusOfCircle;
-double areaOfCircle;
-double perimeterOfCircle;
+int lengthOfRectangle;
+int widthOfRectangle;
+int areaOfRectangle;
+int perimeterOfRectangle;
 
 int main() {
-    std::cout << "Enter the radius of the circle (mm): ";
-    std::cin >> radiusOfCircle;
+    std::cout << "Enter the length of the rectangle (mm): ";
+    std::cin >> lengthOfRectangle;
+    std::cout << "Enter the width of the rectangle (mm): ";
+    std::cin >> widthOfRectangle;
     std::cout << std::endl;
-    areaOfCircle = M_PI * pow(radiusOfCircle, 2);
-    perimeterOfCircle = 2 * M_PI * radiusOfCircle;
+    areaOfRectangle = lengthOfRectangle * widthOfRectangle;
+    perimeterOfRectangle = 2 * (lengthOfRectangle + widthOfRectangle);
     std::cout << std::endl;
-    std::cout << "This circle's area is " << areaOfCircle;
+    std::cout << "This rectangle's area is " << areaOfRectangle;
     std::cout << "mm²" << std::endl;
-    std::cout << "This circle's perimeter is ";
-    std::cout << perimeterOfCircle << "mm" << std::endl;
+    std::cout << "This rectangle's perimeter is ";
+    std::cout << perimeterOfRectangle << "mm" << std::endl;
 
     std::cout << std::endl;
     std::cout << "Done." << std::endl;
